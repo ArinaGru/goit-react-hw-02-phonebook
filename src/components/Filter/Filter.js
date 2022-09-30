@@ -1,4 +1,6 @@
 import { MyInput, MyLable } from './Filter.styled';
+import PropTypes from 'prop-types';
+
 export const Filter = ({ value, onChange }) => {
   return (
     <MyLable>
@@ -6,4 +8,9 @@ export const Filter = ({ value, onChange }) => {
       <MyInput name="filter" type="text" value={value} onChange={onChange} />
     </MyLable>
   );
+};
+
+Filter.propTypes = {
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
